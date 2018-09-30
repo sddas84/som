@@ -1,0 +1,41 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+
+
+
+<div class="container">
+  <div class="jumbotron" style="background-color:#1daeff !important;">
+    <h2 style="color:#fff;">This is our final page</h2>      
+    <p style="color:#fff;">Predicting Capital</p>
+  </div>
+  <p>Our App</p>           
+</div>
+
+<div class="card text-center">
+  <div class="card-header">
+    Results
+  </div>
+  <div class="card-body" style="background-color:#1daeff;">
+    <h5 class="card-title">Capital App</h5>
+    <hr/>
+    <p class="card-text"><div class="alert alert-danger" role="alert">
+  {{ capital }}
+</div></p>
+
+<!-- Main ML Prediction Display Here -->
+<p>Capital: <span style="color:#0091EA;">{{ capital }} </span></p>
+
+<!-- Main ML Prediction Display Ends Here -->
+
+   
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='css/styles.css')}}">
+{% endblock %}
